@@ -1,39 +1,33 @@
 SYNOPSIS
 ========
 
-The program `sff2fastq` extracts read information from a SFF file,
-produced by the 454 genome sequencer, and outputs the sequences and
-quality scores in a FASTQ format.
+The program `sff-adaptersplitter` utilizes source from `sff2fastq` written by Indraniel Das (indraniel@gmail.com or idas@wustl.edu)from The Genome Institute at Washington University, St. Louis, MO.
+
+It takes a multiplexed SFF file, produced by the 454 genome sequencer, and demultiplexes the reads according to given barcodes into separate SFF files per adapter.
 
 USAGE
 =====
 
-Given an SFF file, `file.sff` you can simply run:
+Given an SFF file, `file.sff`, and a barcode file, `barcode.txt`,you can simply run:
 
-    sff2fastq file.sff
+    sff-adaptersplitter barcode.txt file.sff
 
-`sff2fastq` will also read from standard input if a SFF file is not specified on the command line.  For example, you can do the following:
-
-    cat file.sff | sff2fastq > file.fastq
-
-This is useful if you have a compressed sff file and you'd like to avoid
-creating temporary files like so:
-
-    zcat file.sff.gz | sff2fastq > file.fastq
-
-_(This feature has been kindly added by [Björn Winckler](https://github.com/b4winckler) )_
 
 Options
 -------
 
-Below is the help message (via `sff2fastq -h`) describing its usage & options:
+`sff-adaptersplitter` can search for adapters on the entire read sequence or only using the quality trimmed sequence. Trimming is turned on by default, but can be turned off like this:
 
-    Usage: sff2fastq [options] [sff_file]
-            -h                  This help message   
-            -v                  Program and version information
-            -n                  Output the untrimmed sequence
-            -o <fastq_file>     Desired fastq output file. If not specified, 
-                                defaults to stdout
+    sff-adaptersplitter barcode.txt file.sff <trimming 0|1 (default: 1)>
+    
+Barcode files
+-------------
+
+The barcode files supplied to `sff-adaptersplitter` are simple tab-separated text files with barcode-ID in the first column and barcode-sequence in the second column, e.g.
+
+    IonXpress_001	CTAAGGTAAC
+    IonXpress_002	TAAGGAGAAC
+    IonXpress_003	AAGAGGATTC
 
 
 INSTALLATION
