@@ -1,7 +1,7 @@
 SYNOPSIS
 ========
 
-The program `sff-adaptersplitter` utilizes source from `sff2fastq` written by Indraniel Das (indraniel@gmail.com or idas@wustl.edu)from The Genome Institute at Washington University, St. Louis, MO.
+The program `sff-adaptersplitter` utilizes source from `sff2fastq` written by Indraniel Das (indraniel@gmail.com or idas@wustl.edu) from The Genome Institute at Washington University, St. Louis, MO.
 
 It takes a multiplexed SFF file, produced by the 454 genome sequencer, and demultiplexes the reads according to given barcodes into separate SFF files per adapter.
 
