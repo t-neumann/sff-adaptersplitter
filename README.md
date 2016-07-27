@@ -33,50 +33,26 @@ The barcode files supplied to `sff-adaptersplitter` are simple tab-separated tex
 INSTALLATION
 ============
 
-The installation process currently consists of a very simple Makefile.
+In order to build NextGenMap only "cMake":http://www.cmake.org/ (>=2.8) and g++ are required. Typically these tools should be already available on your computer. If not, please install them.
+The installation process utilizes "cMake":http://www.cmake.org/ (>=2.8) to create a simple Makefile, which can then build with standard "make".
 
-Just do the following:
-
-    git clone git://github.com/indraniel/sff2fastq.git;
-    cd sff2fastq;
-    make; # try 'make genome' if at the Genome Center at Washington University
-          # or on a Linux distribution from 2008 or earlier
-
-The `sff2fastq` executable should be in the working directory.
-Afterwards, you can move the executable to wherever you wish.
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ../bin/sffsplit
 
 NOTES
 =====
 
-This has been successfully compiled on Linux/Ubuntu 8.04 & 9.10
-workstations (both 32-bit and 64-bit machines), and on Mac OS X (version
-10.5).  Compiling on other types of operating systems and architectures
+This has been successfully compiled on Linux/Ubuntu 14.04 LTS and Linux/Ubuntu CentOS 7
+workstations (64-bit machines), and on Mac OS X (10.11).  Compiling on other types of operating systems and architectures
 has not been experimented upon.
-
-The FASTQ output produced is of the Sanger FASTQ format as described
-here (http://maq.sourceforge.net/fastq.shtml).
-
-Without any given options the default approach is to output trimmed
-sequence and quality values.  This is similar in nature to the sff tools
-produced by 454 Life Sciences/Roche.
 
 AUTHORS
 =======
 
-Indraniel Das (indraniel@gmail.com or idas@wustl.edu)
-The Genome Institute at Washington University
-
-Contributors
-------------
-
-* [Björn Winckler](https://github.com/b4winckler)
-* [James Casbon](https://github.com/jamescasbon)
-
-ACKNOWLEDGEMENTS
-================
-
-This software was developed at The Genome Institute at Washington
-University, St. Louis, MO.
+Tobias Neumann (tobias.neumann.at@gmail.com)
 
 DISCLAIMER
 ==========
@@ -84,4 +60,4 @@ DISCLAIMER
 This software is provided "as is" without warranty of any kind.
 
 
-March 23, 2010
+August 9, 2012
