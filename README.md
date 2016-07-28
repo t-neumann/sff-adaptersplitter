@@ -33,7 +33,7 @@ The barcode files supplied to `sff-adaptersplitter` are simple tab-separated tex
 INSTALLATION
 ============
 
-In order to build NextGenMap only [cmake](http://www.cmake.org/) (>=2.8) and g++ are required. Typically these tools should be already available on your computer. If not, please install them.
+In order to build *sff-adaptersplitter* only *[cmake](http://www.cmake.org/)* (>=2.8) and *g++* are required. Typically these tools should be already available on your computer. If not, please install them.
 The installation process utilizes *cmake* to create a simple Makefile, which can then build with standard *make*.
 
     mkdir build
