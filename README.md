@@ -52,7 +52,7 @@ has not been experimented upon.
 AUTHORS
 =======
 
-Tobias Neumann (tobias.neumann.at@gmail.com)
+[Tobias Neumann](tobias.neumann.at@gmail.com)
 
 DISCLAIMER
 ==========
